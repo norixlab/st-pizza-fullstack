@@ -21,7 +21,7 @@ const Login = () => {
             try {
                 setLoading(true);
                 await axios.post('/api/auth/login', user);
-                toast.success("Login success");
+                toast.success('Login success');
                 router.push('/')
                 
             } catch (error) {
@@ -34,22 +34,22 @@ const Login = () => {
     return (
         <div className=" min-w-[300px] mx-auto">
             <div className="text-center text-4xl text-primary font-semibold italic">
-                <h1>{loading ? 'Loading...':'Login'}</h1>
+                <h1>{loading ? 'Loading...' : 'Login'}</h1>
             </div>
             <form className="flex flex-col gap-4 my-8">
                 <input
                     type="email"
                     placeholder="Email"
                     className="border border-gray-300 hover:border-primary transition-all duration-200 rounded-lg bg-gray-100 p-2 outline-none"
-                value={user.email}
-                onChange={(e)=>setUser({...user, email: e.target.value})}
+                    value={user.email}
+                    onChange={(e) => setUser({ ...user, email: e.target.value })}
                 />
                 <input
                     type="password"
                     placeholder="Password"
                     className="border border-gray-300 hover:border-primary transition-all duration-200 rounded-lg bg-gray-100 p-2 outline-none"
-                 value={user.password}
-                onChange={(e)=>setUser({...user, password: e.target.value})}
+                    value={user.password}
+                    onChange={(e) => setUser({ ...user, password: e.target.value })}
                 />
                 <button
                     onClick={onLogin}
@@ -66,7 +66,7 @@ const Login = () => {
                     <span>Git Hub</span>
                 </button>
                 <div className="text-gray-700 text-center">
-                    Don't have an account yet?&nbsp;
+                    Don&apos;t have an account yet?&nbsp;
                     <Link href={'/register'} className="text-blue-700 hover:text-primary">
                         Register
                     </Link>
