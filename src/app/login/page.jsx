@@ -66,7 +66,7 @@ const Login = () => {
                     <span>Git Hub</span>
                 </button>
                 <div className="text-gray-700 text-center">
-                    Don't have an account yet?&nbsp;
+                    Don&apos;t have an account yet?&nbsp;
                     <Link href={'/register'} className="text-blue-700 hover:text-primary">
                         Register
                     </Link>
